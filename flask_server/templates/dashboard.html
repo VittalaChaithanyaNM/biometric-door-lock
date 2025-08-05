@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Door Access Logs</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Biometric Door Lock Logs</h1>
+    <table>
+        <tr><th>Timestamp</th><th>Method</th></tr>
+        {% for log in logs %}
+        <tr>
+            <td>{{ log[0] }}</td>
+            <td>{{ log[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
